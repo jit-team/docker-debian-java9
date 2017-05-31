@@ -7,5 +7,5 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | te
     apt-get update
 
 RUN echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections; \
-    apt-get install -y oracle-java9-installer oracle-java9-set-default; \
+    apt-get install -y oracle-java9-installer oracle-java9-set-default libelf-dev; \
     rm -rf /var/cache/oracle-jdk9-installer
